@@ -10,14 +10,23 @@
 //#include "triad.h"
 #include "params.hpp"
 
+#include "Snap.h"
+
 #include <vector>
 #include <map>
 #include <string>
 #include <cmath>
 #include "stdafx.h"
 
+#ifdef _MSC_VER
+#  include <intrin.h>
+#  define __builtin_popcountll __popcnt64
+#endif
+
 //#include <cstdint>
+#ifndef _MSC_VER
 #include <x86intrin.h>
+#endif
 
 //inline uint64_t nthset(uint64_t x, unsigned n) {
 //    return _pdep_u64(1ULL << n, x);

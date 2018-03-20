@@ -1,3 +1,4 @@
+#include "StdAfx.h"
 #include "handler.hpp"
 
 handler::handler(){
@@ -356,7 +357,8 @@ void create_file(const params& confParams, const double p){
 	std::string dynType(confParams.dynamicsType.begin(), confParams.dynamicsType.end());
 
 	//outFileName += L"_"  + std::to_string((long long)confParams.I) + L"_" + dynType + L"_" + std::to_wstring(rndInstanceNumber) + L".txt";
-	outFileName += "_" + ToString(confParams.iterations) + "_" + dynType + "_" + ToString(rndInstanceNumber) + ".txt";
+	/* confParams.iterations replaced by confParams.repetitions */
+	outFileName += "_" + ToString(confParams.repetitions) + "_" + dynType + "_" + ToString(rndInstanceNumber) + ".txt";
 	//const wchar_t * wname = outFileName.c_str();
 
 	//const char *ofn = outFileName.c_str();

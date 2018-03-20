@@ -4,7 +4,7 @@
  *  Created on: Feb 13, 2018
  *      Author: pgorski
  */
-
+#include "StdAfx.h"
 #include "params.hpp"
 
 params::params(){
@@ -80,8 +80,8 @@ void params::initialize(std::string filename){
 	pajek_structure2.name = (n + "pajek_" + h2);
 
 	//-----------------FLAGS-------------------
-	TO_FILE = false;
-	ITER_KEEP = false;
+	TO_FILE = true;
+	ITER_KEEP = true;
 	INST_KEEP = false;
 	FINAL_STATE_KEEP = false;
 

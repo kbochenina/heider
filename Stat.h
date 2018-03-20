@@ -13,7 +13,7 @@ public:
 	std::vector<int> iterations;
 	std::vector<int> largestGroupSizes;
 	std::vector<int> neg_links;
-	int hb = 0, heaven = 0;
+	int hb, heaven;
 	std::vector<int> mean_attr;
 	std::vector<int> mean_attr_beg;
 	std::vector<int> mean_attr_end;
@@ -21,7 +21,7 @@ public:
 	double Sigma(std::vector<int>& vec);
 
 
-	Stat(void) {};
+	Stat(void) {hb = 0; heaven = 0;};
 	void AddIterationsVal(int val) {iterations.push_back(val);}
 	void AddLargestGroupSizeVal(int val) {largestGroupSizes.push_back(val);}
 	void Clear() {iterations.clear();largestGroupSizes.clear();}
